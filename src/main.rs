@@ -1,5 +1,6 @@
 use chrono::NaiveDateTime;
 use std::cmp;
+use std::env;
 use neo4rs::*;
 use std::sync::Arc;
 use std::sync::atomic::{AtomicU32, Ordering};
@@ -182,7 +183,10 @@ fn parsed_ac(ac_keys:&Vec<ParsedAccount>) -> Vec<String> {
 }
 #[tokio::main]
 async fn setup_graph(credit: &str, debit: &str, amt: i64, dt: &NaiveDateTime) {
-   let uri = "localhost:7687";
+   let uri = match env::var("DB_HOST") {
+                   Ok(v) => v,
+                   Err(e) => "localhost:7687".to_string()
+   };
    let user = "neo4j";
    let pass = "94077079";
    let id = "1".to_string();
