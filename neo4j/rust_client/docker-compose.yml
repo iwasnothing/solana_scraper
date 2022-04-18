@@ -1,0 +1,41 @@
+version: '3'
+services:
+  neo4jdb:
+    volumes:
+    - /root/solana_scraper/neo4j/data:/data
+    - /root/solana_scraper/neo4j/conf:/var/lib/neo4j/conf
+    - /root/solana_scraper/neo4j/plugins:/var/lib/neo4j/plugins
+    environment:
+    - NEO4J_AUTH=neo4j/94077079
+    ports:
+    - "7687:7687"
+    image: neo4j
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest.arm64
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 22181:2181
+  kafka:
+    image: confluentinc/cp-kafka:latest.arm64
+    depends_on:
+      - zookeeper
+    ports:
+      - 29092:29092
+      - 9092:9092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+  solana_scraper:
+    environment:
+    - DB_HOST=neo4jdb:7687
+    image: solana_scraper
+    restart: on-failure
+    depends_on:
+    - neo4jdb
+    - kafka
