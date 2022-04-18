@@ -1,0 +1,529 @@
+EpochInfo { epoch: 301, slot_index: 107257, slots_in_epoch: 432000, absolute_slot: 130139257, block_height: 118019086, transaction_count: Some(69159054314) }
+hi number 2 from the spawned thread!
+my-group-2
+hi number 1 from the spawned thread!
+my-group-1
+Failed consuming messages: No host reachable
+Failed consuming messages: No host reachable
+my-group-1
+Failed consuming messages: No host reachable
+my-group-2
+Failed consuming messages: No host reachable
+my-group-1
+Failed consuming messages: No host reachable
+my-group-2
+Failed consuming messages: No host reachable
+my-group-1
+Failed consuming messages: No host reachable
+my-group-2
+Failed consuming messages: No host reachable
+my-group-2
+Failed consuming messages: No host reachable
+my-group-1
+Failed consuming messages: No host reachable
+my-group-2
+my-group-1
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-1
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-2
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-1
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-2
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-1
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-2
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-1
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-2
+Failed consuming messages: Kafka Error (UnknownTopicOrPartition)
+my-group-1
+my-group-2
+No messages available right now.
+No messages available right now.
+block time: 2022-04-17T11:57:58
+"Program log: Instruction: Transfer"
+my-group-1
+my-group-2
+No messages available right now.
+No messages available right now.
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+8tkQQB7hzsDb8kXAbdJMU9hPGD9NXP9pAK1z5QP1JxEu -> 5Qe4ERaVHFXPEx2M9p9qYLxvYV2V66Vf9Nbo4T922nui : 2039280,5000
+8tkQQB7hzsDb8kXAbdJMU9hPGD9NXP9pAK1z5QP1JxEu,5Qe4ERaVHFXPEx2M9p9qYLxvYV2V66Vf9Nbo4T922nui,2039280,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+my-group-1
+my-group-2
+"Program 11111111111111111111111111111111 success"
+kafka client pulled transfer:0@0: [56, 116, 107, 81, 81, 66, 55, 104, 122, 115, 68, 98, 56, 107, 88, 65, 98, 100, 74, 77, 85, 57, 104, 80, 71, 68, 57, 78, 88, 80, 57, 112, 65, 75, 49, 122, 53, 81, 80, 49, 74, 120, 69, 117, 44, 53, 81, 101, 52, 69, 82, 97, 86, 72, 70, 88, 80, 69, 120, 50, 77, 57, 112, 57, 113, 89, 76, 120, 118, 89, 86, 50, 86, 54, 54, 86, 102, 57, 78, 98, 111, 52, 84, 57, 50, 50, 110, 117, 105, 44, 50, 48, 51, 57, 50, 56, 48, 44, 50, 48, 50, 50, 45, 48, 52, 45, 49, 55, 32, 49, 49, 58, 53, 55, 58, 53, 56]
+8tkQQB7hzsDb8kXAbdJMU9hPGD9NXP9pAK1z5QP1JxEu,5Qe4ERaVHFXPEx2M9p9qYLxvYV2V66Vf9Nbo4T922nui,2039280,2022-04-17 11:57:58
+kafka client pulled transfer:0@0: [56, 116, 107, 81, 81, 66, 55, 104, 122, 115, 68, 98, 56, 107, 88, 65, 98, 100, 74, 77, 85, 57, 104, 80, 71, 68, 57, 78, 88, 80, 57, 112, 65, 75, 49, 122, 53, 81, 80, 49, 74, 120, 69, 117, 44, 53, 81, 101, 52, 69, 82, 97, 86, 72, 70, 88, 80, 69, 120, 50, 77, 57, 112, 57, 113, 89, 76, 120, 118, 89, 86, 50, 86, 54, 54, 86, 102, 57, 78, 98, 111, 52, 84, 57, 50, 50, 110, 117, 105, 44, 50, 48, 51, 57, 50, 56, 48, 44, 50, 48, 50, 50, 45, 48, 52, 45, 49, 55, 32, 49, 49, 58, 53, 55, 58, 53, 56]
+8tkQQB7hzsDb8kXAbdJMU9hPGD9NXP9pAK1z5QP1JxEu,5Qe4ERaVHFXPEx2M9p9qYLxvYV2V66Vf9Nbo4T922nui,2039280,2022-04-17 11:57:58
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: TransferChecked"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+56pzXb1q2t4ZwgHC77pTELid2NYw8upu57McFK5j8Mj3 -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+56pzXb1q2t4ZwgHC77pTELid2NYw8upu57McFK5j8Mj3,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+56pzXb1q2t4ZwgHC77pTELid2NYw8upu57McFK5j8Mj3 -> 3sxgRw3NjtWC4U7o62EsGj69hgcJoeZvSgyUUb8JeCuw : 12500,12500
+56pzXb1q2t4ZwgHC77pTELid2NYw8upu57McFK5j8Mj3,3sxgRw3NjtWC4U7o62EsGj69hgcJoeZvSgyUUb8JeCuw,12500,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+5BvwDGaLZZoxoSLKZiLVofGViXhUC8hZptU1xC1QCYQz -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+5BvwDGaLZZoxoSLKZiLVofGViXhUC8hZptU1xC1QCYQz,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+5BvwDGaLZZoxoSLKZiLVofGViXhUC8hZptU1xC1QCYQz -> 3sxgRw3NjtWC4U7o62EsGj69hgcJoeZvSgyUUb8JeCuw : 12500,12500
+5BvwDGaLZZoxoSLKZiLVofGViXhUC8hZptU1xC1QCYQz,3sxgRw3NjtWC4U7o62EsGj69hgcJoeZvSgyUUb8JeCuw,12500,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+36c6YqAwyGKQG66XEp2dJc5JqjaBNv7sVghEtJv4c7u6 -> CmiPgGfWeteicRisWRuJzn7L649zWpw9Qya8g3ey9cZt : 5000,77999995000
+36c6YqAwyGKQG66XEp2dJc5JqjaBNv7sVghEtJv4c7u6,CmiPgGfWeteicRisWRuJzn7L649zWpw9Qya8g3ey9cZt,5000,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+36c6YqAwyGKQG66XEp2dJc5JqjaBNv7sVghEtJv4c7u6 -> 9NBvCk78BUVe3yLBwB2H43S7JBSY3zXzZQKSiH1AFgN2 : 78000000000,0
+36c6YqAwyGKQG66XEp2dJc5JqjaBNv7sVghEtJv4c7u6,9NBvCk78BUVe3yLBwB2H43S7JBSY3zXzZQKSiH1AFgN2,78000000000,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+6xHVXHbHUa4NgbgtpZUwMzsdmGdycek8MHFmAiCGKPrE -> 5JQZpgEBqg9QUHJ9qH8eibJ43nXrQxkvsGWtBtxXSe8r : 2039280,1898120
+6xHVXHbHUa4NgbgtpZUwMzsdmGdycek8MHFmAiCGKPrE,5JQZpgEBqg9QUHJ9qH8eibJ43nXrQxkvsGWtBtxXSe8r,2039280,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+7eyFCjcwLTBeYya4XXLbUzPZvuiPncv3ppi38Y6qvn6f -> 5JQZpgEBqg9QUHJ9qH8eibJ43nXrQxkvsGWtBtxXSe8r : 1893120,2044280
+7eyFCjcwLTBeYya4XXLbUzPZvuiPncv3ppi38Y6qvn6f,5JQZpgEBqg9QUHJ9qH8eibJ43nXrQxkvsGWtBtxXSe8r,1893120,2022-04-17 11:57:58
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+block time: 2022-04-17T11:57:59
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+HiPTeeo5cFakPkCxcorpCm2bfM6k3daBDiix99oPGvtM -> dstrrDLnhLGkuQFTc1Sh6Gdgd4aPbuwdkn7B3njBJgt : 2039280,5000
+HiPTeeo5cFakPkCxcorpCm2bfM6k3daBDiix99oPGvtM,dstrrDLnhLGkuQFTc1Sh6Gdgd4aPbuwdkn7B3njBJgt,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+JDkJWPGF33uwQHdtMKUCFemY4cZx1SnHYfc1u56df3NB -> TeqNPbEhqfVcRPz6NJn6VzQ4vwsMFBXaKTMt4euE8vV : 2039280,5000
+JDkJWPGF33uwQHdtMKUCFemY4cZx1SnHYfc1u56df3NB,TeqNPbEhqfVcRPz6NJn6VzQ4vwsMFBXaKTMt4euE8vV,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+4frfPQ4qZvuJijYgtV2SypRLBDteRkiMZodW7GJnj7Ue -> D7oe9HzjfxCbpwoLgN8ZCo7WSVw2GamjW2LRNBNJBx5e : 2039280,5000
+4frfPQ4qZvuJijYgtV2SypRLBDteRkiMZodW7GJnj7Ue,D7oe9HzjfxCbpwoLgN8ZCo7WSVw2GamjW2LRNBNJBx5e,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+AaCUnanNbodCnpBqAVuJm4B7KSFUU2ySdWsUaJru3T8c -> agsWhfJ5PPGjmzMieWY8BR5o1XRVszUBQ5uFz4CtDiJ : 2039280,10000
+AaCUnanNbodCnpBqAVuJm4B7KSFUU2ySdWsUaJru3T8c,agsWhfJ5PPGjmzMieWY8BR5o1XRVszUBQ5uFz4CtDiJ,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+ANP74VNsHwSrq9uUSjiSNyNWvf6ZPrKTmE4gHoNd13Lg -> EQK83bZ6gSAEiaFejgA5oTJ9HxEmE16nZC9nFcxHQSHR : 4999999998,20000
+ANP74VNsHwSrq9uUSjiSNyNWvf6ZPrKTmE4gHoNd13Lg,EQK83bZ6gSAEiaFejgA5oTJ9HxEmE16nZC9nFcxHQSHR,4999999998,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+J6XJaJHxYCPuvbUUYAQhzaoPQbKG9GVq38u77b4QJLU3 -> 8nXJpkqRq4meGMDwxRHy9ozdNzvAHUkNh82KrBpMvWQ : 2234160,5000
+J6XJaJHxYCPuvbUUYAQhzaoPQbKG9GVq38u77b4QJLU3,8nXJpkqRq4meGMDwxRHy9ozdNzvAHUkNh82KrBpMvWQ,2234160,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+AKVFJYoWCZDAcBq57aepvfAaB3EFsJNhXW8fov4fNtyb -> B6yoQK4XsC2yfm5VXnLNk1ZAffdiBg1tZULm6fijzn2f : 2039280,5000
+AKVFJYoWCZDAcBq57aepvfAaB3EFsJNhXW8fov4fNtyb,B6yoQK4XsC2yfm5VXnLNk1ZAffdiBg1tZULm6fijzn2f,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+9rxBpf5Qa13ZTGVRouZctSTyEWHMcAP8hhcr1iS2hXdP -> A9ga9zwFYM49kM7gc7R4EMUrCwXHywDiLpoZgVHfaYye : 1781760,25000
+9rxBpf5Qa13ZTGVRouZctSTyEWHMcAP8hhcr1iS2hXdP,A9ga9zwFYM49kM7gc7R4EMUrCwXHywDiLpoZgVHfaYye,1781760,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+4JrDa258nSTnVXnCzDnAHMUWDa1hvTzbTrWdmgYbCxn7 -> A9ga9zwFYM49kM7gc7R4EMUrCwXHywDiLpoZgVHfaYye : 15000,1791760
+4JrDa258nSTnVXnCzDnAHMUWDa1hvTzbTrWdmgYbCxn7,A9ga9zwFYM49kM7gc7R4EMUrCwXHywDiLpoZgVHfaYye,15000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+rLimwDjHJY6mXCW76jiRPYSphnd9vA84gPf3RC7XGFS -> 8pD86oX2gLofHTKP9xerbve62wQPSxvBHxQqFeKas1J2 : 3953456,5000
+rLimwDjHJY6mXCW76jiRPYSphnd9vA84gPf3RC7XGFS,8pD86oX2gLofHTKP9xerbve62wQPSxvBHxQqFeKas1J2,3953456,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+HAe3uoERSy7r2jrDijPaEGZ6ZykXbncynPgwkjYA5iap -> G8bbBksCuZySJgwFYzzfEwBUZBo5pRQtrRXwP2YWBX64 : 2039280,5000
+HAe3uoERSy7r2jrDijPaEGZ6ZykXbncynPgwkjYA5iap,G8bbBksCuZySJgwFYzzfEwBUZBo5pRQtrRXwP2YWBX64,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk -> 3M2b3tLji7rvscqrLAHMukYxDK2nB96Q9hwfV6QkdzBN : 24342058784,5000
+6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,3M2b3tLji7rvscqrLAHMukYxDK2nB96Q9hwfV6QkdzBN,24342058784,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+ANP74VNsHwSrq9uUSjiSNyNWvf6ZPrKTmE4gHoNd13Lg -> CEta4iuDeoUY6PHnzth6HgPV876miGBBZUMNMHat8nCU : 399999991,20000
+ANP74VNsHwSrq9uUSjiSNyNWvf6ZPrKTmE4gHoNd13Lg,CEta4iuDeoUY6PHnzth6HgPV876miGBBZUMNMHat8nCU,399999991,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD -> Do5bGrEdEQAZjb2DR7ryeLr3hEbyFu8dKfmH9N3KYyAC : 12500,0
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD,Do5bGrEdEQAZjb2DR7ryeLr3hEbyFu8dKfmH9N3KYyAC,12500,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+9JJVbXTYsd6RZN6P4Dc2jFt5zFV7s3KQBynz4kkNEWsZ -> 6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk : 2039280,5000
+9JJVbXTYsd6RZN6P4Dc2jFt5zFV7s3KQBynz4kkNEWsZ,6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+2x3yujqB7LCMdCxV7fiZxPZStNy7RTYqWLSvnqtqjHR6 -> 5sC1ZeD21wbQyvL5wc7yL2wFntNdQWyKHg3AZaeXnkh7 : 27980000,1371025000
+2x3yujqB7LCMdCxV7fiZxPZStNy7RTYqWLSvnqtqjHR6,5sC1ZeD21wbQyvL5wc7yL2wFntNdQWyKHg3AZaeXnkh7,27980000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+2x3yujqB7LCMdCxV7fiZxPZStNy7RTYqWLSvnqtqjHR6 -> CYK5jbZy2g1sx3FwXieH5vbxvFBUvLHpSc3i84hH1bSH : 1559040,26420960
+2x3yujqB7LCMdCxV7fiZxPZStNy7RTYqWLSvnqtqjHR6,CYK5jbZy2g1sx3FwXieH5vbxvFBUvLHpSc3i84hH1bSH,1559040,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+5y5nVGiwmn6p3nemUpEKpVFDNdAVbuyuMGA3XK5PZ83B -> 5sC1ZeD21wbQyvL5wc7yL2wFntNdQWyKHg3AZaeXnkh7 : 1372579040,26425960
+5y5nVGiwmn6p3nemUpEKpVFDNdAVbuyuMGA3XK5PZ83B,5sC1ZeD21wbQyvL5wc7yL2wFntNdQWyKHg3AZaeXnkh7,1372579040,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+5y5nVGiwmn6p3nemUpEKpVFDNdAVbuyuMGA3XK5PZ83B -> CYK5jbZy2g1sx3FwXieH5vbxvFBUvLHpSc3i84hH1bSH : 1559040,1371020000
+5y5nVGiwmn6p3nemUpEKpVFDNdAVbuyuMGA3XK5PZ83B,CYK5jbZy2g1sx3FwXieH5vbxvFBUvLHpSc3i84hH1bSH,1559040,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+8UQAh2KKGc23vpGGt3v8QZgb5vQQHJSJ6EYrqW81KZuc -> CNKJd6zxBQKsk5Ruv7w9y389qXoFBvGpbrjmvAA4X6Uh : 2039280,5000
+8UQAh2KKGc23vpGGt3v8QZgb5vQQHJSJ6EYrqW81KZuc,CNKJd6zxBQKsk5Ruv7w9y389qXoFBvGpbrjmvAA4X6Uh,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+block time: 2022-04-17T11:57:59
+"Program log: Instruction: Transfer"
+2uySTNgvGT2kwqpfgLiSgeBLR3wQyye1i1A2iQWoPiFr -> HqUcQZwE78cWmu1WAhS4cowxa1N49SrMULf156L1Hv67 : 5000,183110566
+2uySTNgvGT2kwqpfgLiSgeBLR3wQyye1i1A2iQWoPiFr,HqUcQZwE78cWmu1WAhS4cowxa1N49SrMULf156L1Hv67,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+2uySTNgvGT2kwqpfgLiSgeBLR3wQyye1i1A2iQWoPiFr -> 482WzYAkEU9giXVb9wiKmJEFmqNyQkzCCG7nm3n2caAJ : 183115566,0
+2uySTNgvGT2kwqpfgLiSgeBLR3wQyye1i1A2iQWoPiFr,482WzYAkEU9giXVb9wiKmJEFmqNyQkzCCG7nm3n2caAJ,183115566,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+E1B8h9GbdUgoChnUvuR2eahTcRHtyD7L7mNMA6H52AEg -> STEPNq2UGeGSzCyGVr2nMQAzf8xuejwqebd84wcksCK : 22832600000,5000
+E1B8h9GbdUgoChnUvuR2eahTcRHtyD7L7mNMA6H52AEg,STEPNq2UGeGSzCyGVr2nMQAzf8xuejwqebd84wcksCK,22832600000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD -> B9JiJ4iZUT6Ru3oNens6vXX63KimdQvNnFtR5zP4tDAR : 12500,0
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD,B9JiJ4iZUT6Ru3oNens6vXX63KimdQvNnFtR5zP4tDAR,12500,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+2bfj4FiqJWQhmv9BuPQr6uRrVtSBhL9BYTocqbitFroZ -> JAcoXgh4osx4drqRyUfwRZ6XMoKEodgym97mdZsUS5ji : 5000,7500
+2bfj4FiqJWQhmv9BuPQr6uRrVtSBhL9BYTocqbitFroZ,JAcoXgh4osx4drqRyUfwRZ6XMoKEodgym97mdZsUS5ji,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+2bfj4FiqJWQhmv9BuPQr6uRrVtSBhL9BYTocqbitFroZ -> 3sxgRw3NjtWC4U7o62EsGj69hgcJoeZvSgyUUb8JeCuw : 12500,0
+2bfj4FiqJWQhmv9BuPQr6uRrVtSBhL9BYTocqbitFroZ,3sxgRw3NjtWC4U7o62EsGj69hgcJoeZvSgyUUb8JeCuw,12500,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+AJhonciQB8k8xhuCgPT58DYFhnC1Lmfiy6QPR8NH5Jmg -> agsWhfJ5PPGjmzMieWY8BR5o1XRVszUBQ5uFz4CtDiJ : 2039280,10000
+AJhonciQB8k8xhuCgPT58DYFhnC1Lmfiy6QPR8NH5Jmg,agsWhfJ5PPGjmzMieWY8BR5o1XRVszUBQ5uFz4CtDiJ,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+4VzsUDotYLDsR8sTuduSLNE4hZNcwvJdojrhZjSQpLNj -> 6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk : 2039280,5000
+4VzsUDotYLDsR8sTuduSLNE4hZNcwvJdojrhZjSQpLNj,6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+HzMzDBcKtu4iABQeNhYPhuYSuPcyDpYivwsUxbyVi46k -> 6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk : 5616720,10000
+HzMzDBcKtu4iABQeNhYPhuYSuPcyDpYivwsUxbyVi46k,6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,5616720,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+56pzXb1q2t4ZwgHC77pTELid2NYw8upu57McFK5j8Mj3 -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+56pzXb1q2t4ZwgHC77pTELid2NYw8upu57McFK5j8Mj3,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+56pzXb1q2t4ZwgHC77pTELid2NYw8upu57McFK5j8Mj3 -> FSm1p2fEJmpbpoJZirkNLNtEJ3un7g7f42XLLoWX9Yhq : 12500,12500
+56pzXb1q2t4ZwgHC77pTELid2NYw8upu57McFK5j8Mj3,FSm1p2fEJmpbpoJZirkNLNtEJ3un7g7f42XLLoWX9Yhq,12500,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+8aMhFVDw1yVpAhZyS8oXptXKk4ZWhgdhdG41WWrywXSj -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+8aMhFVDw1yVpAhZyS8oXptXKk4ZWhgdhdG41WWrywXSj,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+8aMhFVDw1yVpAhZyS8oXptXKk4ZWhgdhdG41WWrywXSj -> FSm1p2fEJmpbpoJZirkNLNtEJ3un7g7f42XLLoWX9Yhq : 12500,12500
+8aMhFVDw1yVpAhZyS8oXptXKk4ZWhgdhdG41WWrywXSj,FSm1p2fEJmpbpoJZirkNLNtEJ3un7g7f42XLLoWX9Yhq,12500,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+7fAYhYUPXhPazPA1m7nfqf6UVmYBt17JMya9Ftdc5QjU -> 6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk : 2039280,5000
+7fAYhYUPXhPazPA1m7nfqf6UVmYBt17JMya9Ftdc5QjU,6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: TransferChecked"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+GVA7PcEGqUmRvPn8yzPXcqtiQxnHN57RsfqBUjdBMaJm -> FPAGdy4maUBZoCVFb7EX8QXeZJv892Aiz1gYT6WbyLNm : 2011440,5000
+GVA7PcEGqUmRvPn8yzPXcqtiQxnHN57RsfqBUjdBMaJm,FPAGdy4maUBZoCVFb7EX8QXeZJv892Aiz1gYT6WbyLNm,2011440,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+block time: 2022-04-17T11:57:59
+"Program 11111111111111111111111111111111 success"
+C6p4G7wmePG2BMUQZqYE8SqfN4bayVFQbLqr6fqDT2zW -> USTjXHXKr18tmMn7UG3jSTnok58p7LYsq6FcJTooMcP : 200576760,5000
+C6p4G7wmePG2BMUQZqYE8SqfN4bayVFQbLqr6fqDT2zW,USTjXHXKr18tmMn7UG3jSTnok58p7LYsq6FcJTooMcP,200576760,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+GHV3Cv81pMKe74a4cPkmGe6VPFpiGA9yJNAynfg7tee8 -> 3YQm7ujtXWJU2e9jhp2QGHpnn1ShXn12QjvzMvDgabpX : 99999990004,10000
+GHV3Cv81pMKe74a4cPkmGe6VPFpiGA9yJNAynfg7tee8,3YQm7ujtXWJU2e9jhp2QGHpnn1ShXn12QjvzMvDgabpX,99999990004,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+GB2LGttWydxXt3P3uie9x6mBvFHRmWx2SgLc6T3PRRf6 -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+GB2LGttWydxXt3P3uie9x6mBvFHRmWx2SgLc6T3PRRf6,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+GB2LGttWydxXt3P3uie9x6mBvFHRmWx2SgLc6T3PRRf6 -> HZpLqQyX8U3VssgHdatS5mTySRBPPoXCSMULVBQa1Kw5 : 12500,0
+GB2LGttWydxXt3P3uie9x6mBvFHRmWx2SgLc6T3PRRf6,HZpLqQyX8U3VssgHdatS5mTySRBPPoXCSMULVBQa1Kw5,12500,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+47JpDG7RUYMvQxqfVzH86qjP7m39ieFF4fGaBX6Yok3n -> 5BbmQPKuZqyXmiSxc4wdbz3A22YVWukCfr5DiUWExsCE : 1461600,7902640
+47JpDG7RUYMvQxqfVzH86qjP7m39ieFF4fGaBX6Yok3n,5BbmQPKuZqyXmiSxc4wdbz3A22YVWukCfr5DiUWExsCE,1461600,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+47JpDG7RUYMvQxqfVzH86qjP7m39ieFF4fGaBX6Yok3n -> EBYt4LVNB8Z6sUrXW3NVJEzZ2nZv3q6s1bWzJq83PS7V : 1461600,2310720
+47JpDG7RUYMvQxqfVzH86qjP7m39ieFF4fGaBX6Yok3n,EBYt4LVNB8Z6sUrXW3NVJEzZ2nZv3q6s1bWzJq83PS7V,1461600,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+5QgKf48EEWbJjGeKWyGiu7Bm11SLgRr896QWb8oxWJfs -> 5BbmQPKuZqyXmiSxc4wdbz3A22YVWukCfr5DiUWExsCE : 4008960,5355280
+5QgKf48EEWbJjGeKWyGiu7Bm11SLgRr896QWb8oxWJfs,5BbmQPKuZqyXmiSxc4wdbz3A22YVWukCfr5DiUWExsCE,4008960,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+5QgKf48EEWbJjGeKWyGiu7Bm11SLgRr896QWb8oxWJfs -> EBYt4LVNB8Z6sUrXW3NVJEzZ2nZv3q6s1bWzJq83PS7V : 3772320,236640
+5QgKf48EEWbJjGeKWyGiu7Bm11SLgRr896QWb8oxWJfs,EBYt4LVNB8Z6sUrXW3NVJEzZ2nZv3q6s1bWzJq83PS7V,3772320,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+8p4oaA7SzWqwLZ4JvmkhtNWDafbtPGbZsfFKWUmu1ona -> 5BbmQPKuZqyXmiSxc4wdbz3A22YVWukCfr5DiUWExsCE : 2039280,7324960
+8p4oaA7SzWqwLZ4JvmkhtNWDafbtPGbZsfFKWUmu1ona,5BbmQPKuZqyXmiSxc4wdbz3A22YVWukCfr5DiUWExsCE,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+8p4oaA7SzWqwLZ4JvmkhtNWDafbtPGbZsfFKWUmu1ona -> EBYt4LVNB8Z6sUrXW3NVJEzZ2nZv3q6s1bWzJq83PS7V : 2039280,1733040
+8p4oaA7SzWqwLZ4JvmkhtNWDafbtPGbZsfFKWUmu1ona,EBYt4LVNB8Z6sUrXW3NVJEzZ2nZv3q6s1bWzJq83PS7V,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+EgXY3h8VTnRjVtvsT8ZNT1ecFwwXhnHax6xs5362zjDo -> 5BbmQPKuZqyXmiSxc4wdbz3A22YVWukCfr5DiUWExsCE : 5616720,3747520
+EgXY3h8VTnRjVtvsT8ZNT1ecFwwXhnHax6xs5362zjDo,5BbmQPKuZqyXmiSxc4wdbz3A22YVWukCfr5DiUWExsCE,5616720,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+EgXY3h8VTnRjVtvsT8ZNT1ecFwwXhnHax6xs5362zjDo -> EBYt4LVNB8Z6sUrXW3NVJEzZ2nZv3q6s1bWzJq83PS7V : 3772320,1844400
+EgXY3h8VTnRjVtvsT8ZNT1ecFwwXhnHax6xs5362zjDo,EBYt4LVNB8Z6sUrXW3NVJEzZ2nZv3q6s1bWzJq83PS7V,3772320,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD -> BEihupo7bMfUQaQbzF7y2SWbWTctrDxDyvcpg8JbjwrF : 12500,0
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD,BEihupo7bMfUQaQbzF7y2SWbWTctrDxDyvcpg8JbjwrF,12500,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+9qT3WeLV5o3t3GVgCk9A3mpTRjSb9qBvnfrAsVKLhmU5 -> 8Juu8gXPHCKougXvkg3ZY8HdJcBdqFch7hHKjKFNWTFV : 1,5000
+9qT3WeLV5o3t3GVgCk9A3mpTRjSb9qBvnfrAsVKLhmU5,8Juu8gXPHCKougXvkg3ZY8HdJcBdqFch7hHKjKFNWTFV,1,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+9qT3WeLV5o3t3GVgCk9A3mpTRjSb9qBvnfrAsVKLhmU5 -> 8Juu8gXPHCKougXvkg3ZY8HdJcBdqFch7hHKjKFNWTFV : 1,5000
+9qT3WeLV5o3t3GVgCk9A3mpTRjSb9qBvnfrAsVKLhmU5,8Juu8gXPHCKougXvkg3ZY8HdJcBdqFch7hHKjKFNWTFV,1,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+6P5Ly91Ft88AdwgL6c4Xen4mWTziEYUDBSUpAiGqgY9F -> 6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk : 2039280,5000
+6P5Ly91Ft88AdwgL6c4Xen4mWTziEYUDBSUpAiGqgY9F,6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+8fppW9sdgKk4xyU5hDeifKEf87dWbAvHzcCa8A3NgEu5 -> 6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk : 2039280,5000
+8fppW9sdgKk4xyU5hDeifKEf87dWbAvHzcCa8A3NgEu5,6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+GB2LGttWydxXt3P3uie9x6mBvFHRmWx2SgLc6T3PRRf6 -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+GB2LGttWydxXt3P3uie9x6mBvFHRmWx2SgLc6T3PRRf6,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+GB2LGttWydxXt3P3uie9x6mBvFHRmWx2SgLc6T3PRRf6 -> FSm1p2fEJmpbpoJZirkNLNtEJ3un7g7f42XLLoWX9Yhq : 12500,0
+GB2LGttWydxXt3P3uie9x6mBvFHRmWx2SgLc6T3PRRf6,FSm1p2fEJmpbpoJZirkNLNtEJ3un7g7f42XLLoWX9Yhq,12500,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+HGSqqCejhNuqRGs2b824fbtB1cJXkLm8FqwsGBqfQkjF -> 6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk : 2039280,5000
+HGSqqCejhNuqRGs2b824fbtB1cJXkLm8FqwsGBqfQkjF,6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+HdGsWDaxSDBesEYXmAYsG7WZYkKxUv3qhGJgmXSXnm3d -> 9ckEPJ8eknZZLZTLyMdWcauyvU88nGDc9pbMMi9etmmB : 549557555,10000
+HdGsWDaxSDBesEYXmAYsG7WZYkKxUv3qhGJgmXSXnm3d,9ckEPJ8eknZZLZTLyMdWcauyvU88nGDc9pbMMi9etmmB,549557555,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+99PSam3LDBbGHUCB8pch2jojqAQmVW1qrE18RNW3jHJo -> 6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk : 2039280,5000
+99PSam3LDBbGHUCB8pch2jojqAQmVW1qrE18RNW3jHJo,6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk,2039280,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+6jhJrsjgQFxQd8awNZ8G52LttXNhZxmWP8pbcxGgqxo4 -> STEPNq2UGeGSzCyGVr2nMQAzf8xuejwqebd84wcksCK : 5468000,5000
+6jhJrsjgQFxQd8awNZ8G52LttXNhZxmWP8pbcxGgqxo4,STEPNq2UGeGSzCyGVr2nMQAzf8xuejwqebd84wcksCK,5468000,2022-04-17 11:57:59
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+block time: 2022-04-17T11:58:00
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+4TtAySw2bgii7GSnPtYkzshAdh2Yxy46qfGhJd2erfKA -> 7aMcA8G49nVe8ZQcTTCWLzGe9qnUdyXiY5nw1jN3yYbt : 180965730,5000
+4TtAySw2bgii7GSnPtYkzshAdh2Yxy46qfGhJd2erfKA,7aMcA8G49nVe8ZQcTTCWLzGe9qnUdyXiY5nw1jN3yYbt,180965730,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+DTD5Cb23m82DTSbUA2XPTgze8nSnKyZp3pwyHy9s1xC -> G2H7toJ6FMeHS67Nm2odBisfsdGivF4oJYBp6bmnW3KP : 1370000000,5000
+DTD5Cb23m82DTSbUA2XPTgze8nSnKyZp3pwyHy9s1xC,G2H7toJ6FMeHS67Nm2odBisfsdGivF4oJYBp6bmnW3KP,1370000000,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: TransferChecked"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD -> 31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc : 5000,7500
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD,31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc,5000,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD -> 5mYRDfy98QYDR57BXUNdMxpGbNH6b3EfyXRWMfzVt2dx : 12500,0
+J7nSEX8ADf3pVVicd6yKy2Skvg8iLePEmkLUisAAaioD,5mYRDfy98QYDR57BXUNdMxpGbNH6b3EfyXRWMfzVt2dx,12500,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+CsQuP7GSK8vz7jjGPSK14D5PexxmNJEzYjHEkqqeHaYV -> AhaGyyebJ7c7wGLEy8qxQFe9Ze1wSSVo6EPQKm21NExS : 2039280,5000
+CsQuP7GSK8vz7jjGPSK14D5PexxmNJEzYjHEkqqeHaYV,AhaGyyebJ7c7wGLEy8qxQFe9Ze1wSSVo6EPQKm21NExS,2039280,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+ETKLe3T3a3QfowSHoFUMstdVK5w9WHnmJYWwpGfqmzVx -> 5FCbW5qM9z3HMqDkVjhHRBoSsYVHAtDkjsF6XVAHfCu : 2039280,5000
+ETKLe3T3a3QfowSHoFUMstdVK5w9WHnmJYWwpGfqmzVx,5FCbW5qM9z3HMqDkVjhHRBoSsYVHAtDkjsF6XVAHfCu,2039280,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+36c6YqAwyGKQG66XEp2dJc5JqjaBNv7sVghEtJv4c7u6 -> BE3G2F5jKygsSNbPFKHHTxvKpuFXSumASeGweLcei6G3 : 5000,265354999995000
+36c6YqAwyGKQG66XEp2dJc5JqjaBNv7sVghEtJv4c7u6,BE3G2F5jKygsSNbPFKHHTxvKpuFXSumASeGweLcei6G3,5000,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+36c6YqAwyGKQG66XEp2dJc5JqjaBNv7sVghEtJv4c7u6 -> DQyrAcCrDXQ7NeoqGgDCZwBvWDcYmFCjSb9JtteuvPpz : 265355000000000,0
+36c6YqAwyGKQG66XEp2dJc5JqjaBNv7sVghEtJv4c7u6,DQyrAcCrDXQ7NeoqGgDCZwBvWDcYmFCjSb9JtteuvPpz,265355000000000,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+2uySTNgvGT2kwqpfgLiSgeBLR3wQyye1i1A2iQWoPiFr -> HqUcQZwE78cWmu1WAhS4cowxa1N49SrMULf156L1Hv67 : 5000,117323278
+2uySTNgvGT2kwqpfgLiSgeBLR3wQyye1i1A2iQWoPiFr,HqUcQZwE78cWmu1WAhS4cowxa1N49SrMULf156L1Hv67,5000,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+2uySTNgvGT2kwqpfgLiSgeBLR3wQyye1i1A2iQWoPiFr -> 482WzYAkEU9giXVb9wiKmJEFmqNyQkzCCG7nm3n2caAJ : 117328278,0
+2uySTNgvGT2kwqpfgLiSgeBLR3wQyye1i1A2iQWoPiFr,482WzYAkEU9giXVb9wiKmJEFmqNyQkzCCG7nm3n2caAJ,117328278,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program 11111111111111111111111111111111 success"
+Hj9AzxwQbVzvM8yveFMmwXArei8ATLPfa9SWVDWnjFk1 -> 73pjLFSaDv8Hg6cfB8fgyayrGsmuPnN5Q7KBH3mt4Lep : 600000000,5000
+Hj9AzxwQbVzvM8yveFMmwXArei8ATLPfa9SWVDWnjFk1,73pjLFSaDv8Hg6cfB8fgyayrGsmuPnN5Q7KBH3mt4Lep,600000000,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+GiN99joymMcEPPeciuY2nMgDd9rLarQSqtNtZ7zbCZhL -> CZsNhRQpHRXxaKPc4xQgGsfm2HgTP9oXZao4K8EVijWC : 2039280,5000
+GiN99joymMcEPPeciuY2nMgDd9rLarQSqtNtZ7zbCZhL,CZsNhRQpHRXxaKPc4xQgGsfm2HgTP9oXZao4K8EVijWC,2039280,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: Transfer"
+AUSsPYp9Y8q47H1J4LEsS34uSpD35Zvu5qp8cSXJG4Z7 -> BBM489Wc9URQxx69KD7dAobcCFtfbXPMMFZnxcD3PDLN : 4885920,2034280
+AUSsPYp9Y8q47H1J4LEsS34uSpD35Zvu5qp8cSXJG4Z7,BBM489Wc9URQxx69KD7dAobcCFtfbXPMMFZnxcD3PDLN,4885920,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+AUSsPYp9Y8q47H1J4LEsS34uSpD35Zvu5qp8cSXJG4Z7 -> BjAfk5RWM6aFkyBrbpjT4q5quizD9rKUJtXWcEmZzNrj : 2039280,4880920
+AUSsPYp9Y8q47H1J4LEsS34uSpD35Zvu5qp8cSXJG4Z7,BjAfk5RWM6aFkyBrbpjT4q5quizD9rKUJtXWcEmZzNrj,2039280,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+"Program 11111111111111111111111111111111 success"
+"Program log: Instruction: Transfer"
+DGLx7iQF2crdB71aGn6nJ3yFZQhLfb1jBjzve6gHN9mL -> GpKiiccYFQbExNYAARXZFrMw5idT1vAETocGdzf34kfJ : 5000,96932422
+DGLx7iQF2crdB71aGn6nJ3yFZQhLfb1jBjzve6gHN9mL,GpKiiccYFQbExNYAARXZFrMw5idT1vAETocGdzf34kfJ,5000,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+DGLx7iQF2crdB71aGn6nJ3yFZQhLfb1jBjzve6gHN9mL -> 5pjruNk3Qgazhqh3NHn2G3R3UJwGB4Y29dafhSoqg9nt : 96937422,0
+DGLx7iQF2crdB71aGn6nJ3yFZQhLfb1jBjzve6gHN9mL,5pjruNk3Qgazhqh3NHn2G3R3UJwGB4Y29dafhSoqg9nt,96937422,2022-04-17 11:58:00
+About to publish a message at ["kafka:9092"] to: transfer
+"Program log: Instruction: TransferChecked"
