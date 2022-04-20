@@ -2,23 +2,27 @@ version: '3'
 services:
   neo4jdb:
     volumes:
-    - /root/solana_scraper/neo4j/data:/data
-    - /root/solana_scraper/neo4j/conf:/var/lib/neo4j/conf
-    - /root/solana_scraper/neo4j/plugins:/var/lib/neo4j/plugins
+    - ../data:/data
+    - ../logs:/logs
+    - ../conf:/var/lib/neo4j/conf
+    - ../plugins:/var/lib/neo4j/plugins
     environment:
     - NEO4J_AUTH=neo4j/94077079
     ports:
     - "7687:7687"
     image: neo4j
+    restart: on-failure
   zookeeper:
-    image: confluentinc/cp-zookeeper:latest.arm64
+    image: confluentinc/cp-zookeeper:latest
+    restart: on-failure
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
     ports:
       - 22181:2181
   kafka:
-    image: confluentinc/cp-kafka:latest.arm64
+    image: confluentinc/cp-kafka:latest
+    restart: on-failure
     depends_on:
       - zookeeper
     ports:

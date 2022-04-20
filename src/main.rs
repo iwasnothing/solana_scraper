@@ -7,7 +7,6 @@ use std::sync::Arc;
 use std::sync::atomic::{AtomicU32, Ordering};
 use futures::stream::*;
 use futures::executor::block_on;
-
 use std::time::Duration;
 use std::result::Result;
 use kafka::error::Error as KafkaError;
@@ -52,10 +51,12 @@ fn get_client() -> RpcClient {
     return RpcClient::new(_url);
 }
 fn start_kafka_workers() {
-    let pool = ThreadPool::new(1);
-    for i in 1..2 {
+    let g:Arc<Graph> = Arc::new(graph_connect().unwrap()); 
+    let pool = ThreadPool::new(10);
+    for i in 1..11 {
+        let graph:Arc<Graph> = Arc::clone(&g);
         pool.execute(move|| {
-            pull_transfer_msg(i);
+            pull_transfer_msg(graph,i);
             thread::sleep(Duration::from_millis(100));
         });
     }
@@ -195,33 +196,69 @@ fn parsed_ac(ac_keys:&Vec<ParsedAccount>) -> Vec<String> {
     return ac;
 }
 #[tokio::main]
-async fn setup_graph(credit: &str, debit: &str, amt: i64, dt: &NaiveDateTime) -> Result<(),Error>{
+async fn graph_connect() -> Result<Graph,Error>{
    let uri = match env::var("DB_HOST") {
                    Ok(v) => v,
                    Err(e) => "neo4jdb:7687".to_string()
    };
    let user = "neo4j";
    let pass = "94077079";
-   let id = "1".to_string();
-
-   let graph = match Graph::new(&uri, user, pass).await {
-                   Ok(g) => Arc::new(g),
-                   Err(e) => return Err(e)
+   let config = match config()
+         .uri(&uri)
+         .user(&user)
+         .password(&pass)
+         .max_connections(40)
+         .build() {
+       Ok(c) => c,
+       Err(e) => return Err(e)
    };
-   let mut txn = match graph.start_txn().await {
-                   Ok(tx) => tx,
-                   Err(e) => return Err(e)
-   };
-   txn.run_queries(vec![
-        query("MERGE (a:Account {key: $key})").param("key",credit.to_string()),
-        query("MERGE (a:Account {key: $key})").param("key",debit.to_string()),
-        query("MATCH (ac1:Account {key: $ckey}),(ac2:Account {key: $dkey}) MERGE (ac1)-[rel:TRANSFER_TO {amount: $amount, datetime: $datetime}]->(ac2)").param("ckey",credit.clone()).param("dkey",debit.clone()).param("amount",amt.clone()).param("datetime",dt.clone() ),
-    ])
-    .await
-    .unwrap();
-    txn.commit().await.unwrap(); //or txn.rollback().await.unwrap();
-    println!("created relation: {}->{},{},{}",credit,debit,amt,dt);
-    return Ok(());
+   for i in 1..10 {
+       let c = config.clone();
+       println!("start to connect neo4j");
+       let result:Result<Graph,Error> = match Graph::connect(c).await {
+                   Ok(g) => return Ok(g),
+                   Err(e) => {
+                        thread::sleep(Duration::from_millis(100));
+                        continue;
+                   }
+       };
+   }
+   return Err(Error::IOError{detail: "neo4j failure".to_string()});
+}
+#[tokio::main]
+async fn setup_graph(graph:Arc<Graph>, credit: &str, debit: &str, amt: i64, dt: &NaiveDateTime) -> Result<(),Error>{
+   for i in 1..10 {
+           println!("start neo4j transaction");
+           let result:Result<Txn,Error> =  match graph.start_txn().await {
+                   Ok(tx) => Ok(tx),
+                   Err(e) => {
+                        thread::sleep(Duration::from_millis(100));
+                        continue;
+                   }
+           };
+           let mut txn = result.unwrap();
+	   let qyresult:Result<(),Error> = match txn.run_queries(vec![
+		query("MERGE (a:Account {key: $key})").param("key",credit.to_string()),
+		query("MERGE (a:Account {key: $key})").param("key",debit.to_string()),
+		query("MATCH (ac1:Account {key: $ckey}),(ac2:Account {key: $dkey}) CREATE (ac1)-[rel:TRANSFER_TO {amount: $amount, datetime: $datetime}]->(ac2)").param("ckey",credit.clone()).param("dkey",debit.clone()).param("amount",amt.clone()).param("datetime",dt.clone() ),
+	    ]).await {
+                   Ok(v) => Ok(v),
+                   Err(e) => {
+                        thread::sleep(Duration::from_millis(100));
+                        continue;
+                   }
+            };
+	    let commit_result:Result<(),Error> = match txn.commit().await {
+                   Ok(v) => Ok(v),
+                   Err(e) => {
+                        thread::sleep(Duration::from_millis(100));
+                        continue;
+                   }
+            };
+	    println!("created relation: {}->{},{},{}",credit,debit,amt,dt);
+            return Ok(());
+   }
+   return Err(Error::IOError{detail: "neo4j failure".to_string()});
 }
 fn publish_transfer_msg(credit: &str, debit: &str, amt: i64, dt: &NaiveDateTime) {
     let broker = "kafka:9092";
@@ -233,14 +270,14 @@ fn publish_transfer_msg(credit: &str, debit: &str, amt: i64, dt: &NaiveDateTime)
         println!("Failed producing messages: {}", e);
     }
 }
-fn pull_transfer_msg(grp: i32) {
+fn pull_transfer_msg(g:Arc<Graph>,grp: i32) {
     loop {
+        let graph:Arc<Graph> = Arc::clone(&g);
         let broker = "kafka:9092".to_owned();
         let topic = "transfer".to_owned();
         let group = format!("my-group-{}", grp);
         println!("Thread-{} created to pull kafka msg", group);
-
-        if let Err(e) = consume_messages(group, topic, vec![broker]) {
+        if let Err(e) = consume_messages(graph,group, topic, vec![broker]) {
             println!("Failed consuming messages: {}", e);
         }
         thread::sleep(Duration::from_millis(100));
@@ -285,7 +322,7 @@ fn produce_message<'a, 'b>(
 
     Ok(())
 }
-fn consume_messages(group: String, topic: String, brokers: Vec<String>) -> Result<(), KafkaError> {
+fn consume_messages(g:Arc<Graph>, group: String, topic: String, brokers: Vec<String>) -> Result<(), KafkaError> {
     let mut con = Consumer::from_hosts(brokers)
         .with_topic(topic)
         .with_group(group)
@@ -298,7 +335,6 @@ fn consume_messages(group: String, topic: String, brokers: Vec<String>) -> Resul
         println!("No messages available right now.");
         return Ok(());
     }
-    let pool = ThreadPool::new(1);
     let mut prev_offset:i64 = 0;
     for ms in mss.iter() {
             for m in ms.messages() {
@@ -310,20 +346,17 @@ fn consume_messages(group: String, topic: String, brokers: Vec<String>) -> Resul
                 let _msg_str = String::from_utf8(m.value.to_vec()).expect("Found invalid UTF-8");
                 let _msg_clone = _msg_str.clone();
                 println!("pulled msg: {}",_msg_clone);
-                pool.execute(move|| {
-                 let mut done: i32 = 0;
-                 while done == 0 {  
-                    let v: Vec<&str> = _msg_clone.split(",").collect();
-                    let amt_str = v[2].to_string();
-                    let amt:i64 = amt_str.parse::<i64>().unwrap();
-                    let dt = NaiveDateTime::parse_from_str(v[3], "%Y-%m-%d %H:%M:%S").unwrap();
-	            let ret = match setup_graph(&v[0],&v[1],amt,&dt) {
-                         Ok(()) => 1,
-                         Err(e) => 0
-                    };
-                    done = ret
+                let v: Vec<&str> = _msg_clone.split(",").collect();
+                let amt_str = v[2].to_string();
+                let amt:i64 = amt_str.parse::<i64>().unwrap();
+                let dt = NaiveDateTime::parse_from_str(v[3], "%Y-%m-%d %H:%M:%S").unwrap();
+	        for i in 1..10 {
+                      let _graph:Arc<Graph> = Arc::clone(&g);
+                      match setup_graph(_graph,&v[0],&v[1],amt,&dt) {
+                            Ok(()) => break,
+                            Err(e) => continue
+                      }
                  }
-                });
             
             }
             let _ = con.consume_messageset(ms);

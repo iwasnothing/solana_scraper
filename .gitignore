@@ -1,4 +1,6 @@
 target
 neo4j/data
+neo4j/logs
 neo4j/plugins
 neo4j/rust_client/solana_scraper
+neo4j/rust_client/client.tar.gz
