@@ -46,6 +46,13 @@ struct TransferOp {
     delta: i64,
 }
 
+struct TransferRelation {
+    debit: String,
+    credit: String,
+    amt: i64,
+    dt: NaiveDateTime,
+}
+
 fn get_client() -> RpcClient {
     let _url = "https://solana-api.projectserum.com".to_string();
     return RpcClient::new(_url);
@@ -226,9 +233,11 @@ async fn graph_connect() -> Result<Graph,Error>{
    return Err(Error::IOError{detail: "neo4j failure".to_string()});
 }
 #[tokio::main]
-async fn setup_graph(graph:Arc<Graph>, credit: &str, debit: &str, amt: i64, dt: &NaiveDateTime) -> Result<(),Error>{
+async fn setup_graph(graph:Arc<Graph>, t_list: &mut Vec<TransferRelation>) -> Result<(),Error>{
    for i in 1..10 {
            println!("start neo4j transaction");
+           let txn_list = &mut *t_list;
+           let n = txn_list.len();
            let result:Result<Txn,Error> =  match graph.start_txn().await {
                    Ok(tx) => Ok(tx),
                    Err(e) => {
@@ -237,11 +246,13 @@ async fn setup_graph(graph:Arc<Graph>, credit: &str, debit: &str, amt: i64, dt: 
                    }
            };
            let mut txn = result.unwrap();
-	   let qyresult:Result<(),Error> = match txn.run_queries(vec![
-		query("MERGE (a:Account {key: $key})").param("key",credit.to_string()),
-		query("MERGE (a:Account {key: $key})").param("key",debit.to_string()),
-		query("MATCH (ac1:Account {key: $ckey}),(ac2:Account {key: $dkey}) CREATE (ac1)-[rel:TRANSFER_TO {amount: $amount, datetime: $datetime}]->(ac2)").param("ckey",credit.clone()).param("dkey",debit.clone()).param("amount",amt.clone()).param("datetime",dt.clone() ),
-	    ]).await {
+           let mut cmd_list: Vec<Query> = Vec::new();
+           for t in txn_list {
+                cmd_list.push( query("MERGE (a:Account {key: $key})").param("key",t.credit.to_string()) );
+		cmd_list.push(query("MERGE (a:Account {key: $key})").param("key",t.debit.to_string()) );
+		cmd_list.push(query("MATCH (ac1:Account {key: $ckey}),(ac2:Account {key: $dkey}) CREATE (ac1)-[rel:TRANSFER_TO {amount: $amount, datetime: $datetime}]->(ac2)").param("ckey",t.credit.clone()).param("dkey",t.debit.clone()).param("amount",t.amt.clone()).param("datetime",t.dt.clone() ) );
+           }
+	   let qyresult:Result<(),Error> = match txn.run_queries(cmd_list).await {
                    Ok(v) => Ok(v),
                    Err(e) => {
                         thread::sleep(Duration::from_millis(100));
@@ -255,7 +266,7 @@ async fn setup_graph(graph:Arc<Graph>, credit: &str, debit: &str, amt: i64, dt: 
                         continue;
                    }
             };
-	    println!("created relation: {}->{},{},{}",credit,debit,amt,dt);
+	    println!("created {} relations", n);
             return Ok(());
    }
    return Err(Error::IOError{detail: "neo4j failure".to_string()});
@@ -271,13 +282,14 @@ fn publish_transfer_msg(credit: &str, debit: &str, amt: i64, dt: &NaiveDateTime)
     }
 }
 fn pull_transfer_msg(g:Arc<Graph>,grp: i32) {
+    let mut txn_list:Vec<TransferRelation> = Vec::new();
     loop {
         let graph:Arc<Graph> = Arc::clone(&g);
         let broker = "kafka:9092".to_owned();
         let topic = "transfer".to_owned();
         let group = format!("my-group-{}", grp);
         println!("Thread-{} created to pull kafka msg", group);
-        if let Err(e) = consume_messages(graph,group, topic, vec![broker]) {
+        if let Err(e) = consume_messages(graph,group, topic, vec![broker],&mut txn_list) {
             println!("Failed consuming messages: {}", e);
         }
         thread::sleep(Duration::from_millis(100));
@@ -322,7 +334,7 @@ fn produce_message<'a, 'b>(
 
     Ok(())
 }
-fn consume_messages(g:Arc<Graph>, group: String, topic: String, brokers: Vec<String>) -> Result<(), KafkaError> {
+fn consume_messages(g:Arc<Graph>, group: String, topic: String, brokers: Vec<String>, txn_list: &mut Vec<TransferRelation> ) -> Result<(), KafkaError> {
     let mut con = Consumer::from_hosts(brokers)
         .with_topic(topic)
         .with_group(group)
@@ -350,13 +362,17 @@ fn consume_messages(g:Arc<Graph>, group: String, topic: String, brokers: Vec<Str
                 let amt_str = v[2].to_string();
                 let amt:i64 = amt_str.parse::<i64>().unwrap();
                 let dt = NaiveDateTime::parse_from_str(v[3], "%Y-%m-%d %H:%M:%S").unwrap();
-	        for i in 1..10 {
-                      let _graph:Arc<Graph> = Arc::clone(&g);
-                      match setup_graph(_graph,&v[0],&v[1],amt,&dt) {
-                            Ok(()) => break,
-                            Err(e) => continue
-                      }
-                 }
+                let txn = TransferRelation { credit:v[0].to_string(), debit: v[1].to_string(),amt: amt,dt: dt};
+                txn_list.push(txn);
+                if txn_list.len() >= 100 {
+	            for i in 1..10 {
+                          let _graph:Arc<Graph> = Arc::clone(&g);
+                          match setup_graph(_graph,txn_list) {
+                                Ok(()) => { txn_list.clear();break;},
+                                Err(e) => continue
+                          }
+                     }
+                }
             
             }
             let _ = con.consume_messageset(ms);
