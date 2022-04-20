@@ -1,6 +1,9 @@
-FROM arm64v8/rust
+FROM rust
 
-WORKDIR /app
-COPY solana_scraper .
-RUN chmod u+x /app/solana_scraper
-CMD /app/solana_scraper
+RUN cargo new --bin solana_scraper
+WORKDIR /solana_scraper
+COPY client.tar.gz .
+RUN gzip -cd client.tar.gz |tar -xvf -
+RUN cargo build --release
+RUN ls target/release
+CMD target/release/solana_scraper
