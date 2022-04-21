@@ -38,6 +38,9 @@ services:
   solana_scraper:
     environment:
     - DB_HOST=neo4jdb:7687
+    - PULL_THREAD=5
+    - PUBLISH_THREAD=5
+    - BATCH_SIZE=100
     image: solana_scraper
     restart: on-failure
     depends_on:
