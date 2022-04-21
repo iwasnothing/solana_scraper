@@ -59,11 +59,12 @@ fn get_client() -> RpcClient {
 }
 fn start_kafka_workers() {
     let g:Arc<Graph> = Arc::new(graph_connect().unwrap()); 
-    let pool = ThreadPool::new(10);
-    for i in 1..11 {
+    let p = get_parameter("PULL_THREAD",10);
+    let pool = ThreadPool::new(p);
+    for i in 1..p+1 {
         let graph:Arc<Graph> = Arc::clone(&g);
         pool.execute(move|| {
-            pull_transfer_msg(graph,i);
+            pull_transfer_msg(graph,i as i32);
             thread::sleep(Duration::from_millis(100));
         });
     }
@@ -93,7 +94,8 @@ fn get_trns(start: Slot, end: Slot) {
         println!("{:?}->{:?}",start,end);
         let _client = get_client();
         let blocks = _client.get_blocks(start, Some(end)).unwrap();
-        let pool = ThreadPool::new(1);
+        let p = get_parameter("PUBLISH_THREAD",2);
+        let pool = ThreadPool::new(p);
         for s in blocks {
           pool.execute(move|| {
             println!("get_block {:?}",s);
@@ -113,8 +115,8 @@ fn get_trns(start: Slot, end: Slot) {
 		    let delta = get_balance_delta(&_meta.pre_balances,&_meta.post_balances,&ac,&dt);
 		}
             }
-	    let ten_millis = time::Duration::from_millis(1000);
-            thread::sleep(ten_millis);
+	    //let ten_millis = time::Duration::from_millis(100);
+            //thread::sleep(ten_millis);
           });
         }
 }
@@ -201,6 +203,18 @@ fn parsed_ac(ac_keys:&Vec<ParsedAccount>) -> Vec<String> {
         ac.push(a.pubkey.to_string())
     }
     return ac;
+}
+fn get_parameter(parm: &str, default: usize) -> usize {
+   let value:usize = match env::var(parm) {
+                   Ok(v) => {
+                      match v.parse::<usize>() {
+                          Ok(i) => i,
+                          Err(e) => default
+                      }
+                   },
+                   Err(e) => default
+   };
+   return value;
 }
 #[tokio::main]
 async fn graph_connect() -> Result<Graph,Error>{
@@ -364,7 +378,8 @@ fn consume_messages(g:Arc<Graph>, group: String, topic: String, brokers: Vec<Str
                 let dt = NaiveDateTime::parse_from_str(v[3], "%Y-%m-%d %H:%M:%S").unwrap();
                 let txn = TransferRelation { credit:v[0].to_string(), debit: v[1].to_string(),amt: amt,dt: dt};
                 txn_list.push(txn);
-                if txn_list.len() >= 100 {
+                let p = get_parameter("BATCH_SIZE",200);
+                if txn_list.len() >= p {
 	            for i in 1..10 {
                           let _graph:Arc<Graph> = Arc::clone(&g);
                           match setup_graph(_graph,txn_list) {
