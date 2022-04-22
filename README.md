@@ -1,5 +1,5 @@
 # Project tree
-
+```
 .
 |-- ./Cargo.toml
 |-- ./Cargo.lock
@@ -15,7 +15,7 @@
         |-- ./neo4j/rust_client/docker-compose.yml
         |-- ./neo4j/rust_client/Makefile
         `-- ./neo4j/rust_client/check.sh%
-
+```
 - src/main.rs (Rust program source)
 - neo4j/conf (Neo4j config)
 - neo4j/db (Neo4j DB folder)
