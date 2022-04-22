@@ -1,10 +1,23 @@
+# Folder Structure
+root --- src/main.rs (Rust program)
+     |
+     --- neo4j --- rust_client (docker, scripts and make files)
+               |
+               --- conf (neo4j config)
+
+# Performance parameters
+The following parameters can be tuned.  Just update the value in `rust_client/docker-compose.yml`.
+- `PULL_THREAD` ( no. of threads of kafka consumer)
+- `PUBLISH_THREAD` (no. of threads of kafka producer)
+- `BATCH_SIZE` (no. of transaction combined in the batch update to Neo4j)
+
 # Clean up
 run `make clean` to clean up the database and docker image
 
-# Build Rust client
+# Build Rust Program
 run `make build` to compile the rust program and build its docker image
 
-# run test
+# Run Test
 run `make test` to setup docker containers for Rust program, kafka, and neo4j db by docker-compose, and run the checking script forever.
 
 The sample output is like:
