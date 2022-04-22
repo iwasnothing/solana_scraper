@@ -1,9 +1,27 @@
-# Folder Structure
-root --- src/main.rs (Rust program)
-     |
-     --- neo4j --- rust_client (docker, scripts and make files)
-               |
-               --- conf (neo4j config)
+# Project tree
+
+.
+|-- ./Cargo.toml
+|-- ./Cargo.lock
+|-- ./src
+|   `-- ./src/main.rs
+|-- ./README.md
+`-- ./neo4j
+    |-- ./neo4j/plugins
+    |-- ./neo4j/conf
+    |   `-- ./neo4j/conf/neo4j.conf
+    `-- ./neo4j/rust_client
+        |-- ./neo4j/rust_client/Dockerfile
+        |-- ./neo4j/rust_client/docker-compose.yml
+        |-- ./neo4j/rust_client/Makefile
+        `-- ./neo4j/rust_client/check.sh%
+
+- src/main.rs (Rust program source)
+- neo4j/conf (Neo4j config)
+- neo4j/db (Neo4j DB folder)
+- neo4j/logs (Neo4j logs folder)
+- neo4j/plugins (Neo4j plugins folder)
+- neo4j/rust_client (script, docker and makefile)
 
 # Performance parameters
 The following parameters can be tuned.  Just update the value in `rust_client/docker-compose.yml`.
