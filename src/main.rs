@@ -65,14 +65,14 @@ fn start_kafka_workers() {
         let graph:Arc<Graph> = Arc::clone(&g);
         pool.execute(move|| {
             pull_transfer_msg(graph,i as i32);
-            thread::sleep(Duration::from_millis(100));
+            //thread::sleep(Duration::from_millis(100));
         });
     }
 }
 fn main() {
         let mut _client = get_client();
         let mut epoch_start = _client.get_epoch_info().unwrap();
-	let _period = time::Duration::from_millis(10000);
+	let _period = time::Duration::from_millis(1000);
         thread::sleep(_period);
         let mut epoch_end = _client.get_epoch_info().unwrap();
         let mut end_slot = epoch_end.absolute_slot;
